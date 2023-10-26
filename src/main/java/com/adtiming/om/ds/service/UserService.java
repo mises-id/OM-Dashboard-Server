@@ -467,6 +467,7 @@ public class UserService extends BaseService {
         } catch (UnknownAccountException e) {
             throw new OmLoginException("User name is not exist!", e);
         } catch (IncorrectCredentialsException e) {
+            log.info("should be {}", ShiroUtils.sha256(password, "123"));
             throw new OmLoginException("Password is wrong", e);
         } catch (AuthenticationException e) {
             throw new OmLoginException("User authentication failed!", e);

@@ -9,6 +9,7 @@ import com.adtiming.om.ds.dto.Response;
 import com.adtiming.om.ds.model.*;
 import com.adtiming.om.ds.service.CrossBidService;
 import com.adtiming.om.ds.service.ReportService;
+import com.adtiming.om.ds.service.AwsCloudService;
 import com.adtiming.om.ds.util.Util;
 import com.alibaba.fastjson.JSONObject;
 import org.apache.commons.io.FileUtils;
@@ -47,6 +48,9 @@ public class CrossBidController extends BaseController {
 
     @Resource
     CrossBidService crossBidService;
+
+    @Resource
+    AwsCloudService awsService;
 
     @RequestMapping(value = "/cross/bid/get_select_apps", method = RequestMethod.GET)
     public Response getPromoteSelectApps() {
@@ -291,6 +295,7 @@ public class CrossBidController extends BaseController {
                 upload.setMd5File(md5File);
                 upload.setPath(path);
                 this.crossBidService.addUpload(upload);
+                this.awsService.putObject("ads/upload/" + path, dst);
             } else {
                 path = uploadList.get(0).getPath();
             }

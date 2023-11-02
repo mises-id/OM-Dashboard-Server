@@ -545,7 +545,7 @@ INSERT INTO `om_dict` (`pid`, `name`, `value`, `descn`) VALUES
 
 select id from om_dict where name='cp' into @dict_cp_id;
 INSERT INTO `om_dict` (`pid`, `name`, `value`, `descn`) VALUES
-(@dict_cp_id, 'cdn_domain', 'd48fg6wpq9lc4.cloudfront.net/ads', 'CrossPromotion CDN domain'),
+(@dict_cp_id, 'cdn_domain', 'cdn.mises.site/s3://mises-storage/ads', 'CrossPromotion CDN domain'),
 (@dict_cp_id, 'test_cids', '2,3,4,5', 'CrossPromotion test campaign id list'),
 (@dict_cp_id, 'skAdNetworkVersion', '2.0', 'iOS14 SkAdNetworkVersion'),
 (@dict_cp_id, 'skAdNetworkId', NULL, 'iOS14 SkAdNetworkId'),

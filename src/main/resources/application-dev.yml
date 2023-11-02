@@ -26,4 +26,13 @@ spring:
 
 
 
+amazon:
+  aws:
+    access-key-id: AKIAWD3H37CHHOIT4P5B
+    access-key-secret: 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
+  s3:
+    default-bucket: mises-storage
+    region: us-east-2
+    endpoint: https://.com/
+
 http.proxy:

@@ -812,11 +812,11 @@ CREATE TABLE `cp_tmp_crid`
 ) ENGINE = MEMORY DEFAULT CHARSET = utf8 COMMENT ='交叉推广临时CreativeID表, 用于 dtask 生成 PB';
 
 INSERT INTO `cp_template` (`id`, `name`, `type`, `url`, `width`, `height`, `need_carousel`, `status`)
-VALUES (1, 'Default Video', 0, 'https://d48fg6wpq9lc4.cloudfront.net/ads/cp/vd.html', 0, 0, 0, 1),
-       (2, 'Default EndCard', 1, 'https://d48fg6wpq9lc4.cloudfront.net/ads/cp/ec.html', 0, 0, 0, 1),
-       (3, 'Default Banner', 2, 'https://d48fg6wpq9lc4.cloudfront.net/ads/cp/ba.html', 320, 50, 0, 1),
-       (4, 'Default Native', 3, 'https://d48fg6wpq9lc4.cloudfront.net/ads/cp/na.html', 1200, 627, 0, 1),
-       (5, 'Default CP', 4, 'https://d48fg6wpq9lc4.cloudfront.net/ads/cp/cp.html', 0, 0, 0, 1);
+VALUES (1, 'Default Video', 0, 'https://cdn.mises.site/s3://mises-storage/ads/cp/vd.html', 0, 0, 0, 1),
+       (2, 'Default EndCard', 1, 'https://cdn.mises.site/s3://mises-storage/ads/cp/ec.html', 0, 0, 0, 1),
+       (3, 'Default Banner', 2, 'https://cdn.mises.site/s3://mises-storage/ads/cp/ba.html', 320, 50, 0, 1),
+       (4, 'Default Native', 3, 'https://cdn.mises.site/s3://mises-storage/ads/cp/na.html', 1200, 560, 0, 1),
+       (5, 'Default CP', 4, 'https://cdn.mises.site/s3://mises-storage/ads/cp/cp.html', 0, 0, 0, 1);
 
 -- 2020-12-30
 alter table cp_campaign 

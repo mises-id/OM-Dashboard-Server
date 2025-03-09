@@ -1190,3 +1190,9 @@ PARTITION BY RANGE (to_days(`day`))
  PARTITION p202112 VALUES LESS THAN (738521) ENGINE = InnoDB);
 
 INSERT INTO `om_adnetwork` (`id`, `name`, `class_name`, `region_plat_type`, `type`, `ios_adtype`, `android_adtype`, `descn`, `status`, `publisher_visible`, `bid_type`, `expired_time`) VALUES ('27', 'SanAds', 'SanAds', '3', '15', '15', '15', 'SHAREit', '1', '1', '0', '0');
+
+
+ALTER TABLE `om_app` MODIFY `app_id` varchar(200) ;
+ALTER TABLE `om_app` 
+   DROP INDEX `app_id`, 
+   ADD UNIQUE KEY `app_id` (`app_id`(200));

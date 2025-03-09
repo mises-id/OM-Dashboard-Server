@@ -969,6 +969,8 @@ public class MediationService extends BaseService {
         tier.setRuleId(ruleId);
         tier.setAbTest(abTest);
         tier.setName("Tier " + level);
+        tier.setCreateTime(new Date());
+        tier.setLastmodify(new Date());
         int result = this.omPlacementRuleGroupMapper.insert(tier);
         if (result <= 0) {
             throw new RuntimeException("add rule group " + JSONObject.toJSONString(tier) + " failed");

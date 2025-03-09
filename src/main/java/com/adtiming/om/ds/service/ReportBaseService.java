@@ -820,7 +820,7 @@ public class ReportBaseService extends BaseService {
             conditionMap.put("summaryWhereClause", statAdnetworkCriteria.getOredCriteria());
         }
         conditionMap.put("orderByClause", statAdnetworkCriteria.getOrderByClause());
-        log.info("Begin Get adNetwork condition {}", JSONObject.toJSONString(reportConditionDTO);
+        log.info("Begin Get adNetwork condition {}", JSONObject.toJSONString(reportConditionDTO));
         List<StatAdnetwork> statAdNetworkSummary = this.statAdnetworkMapper.selectSummary(conditionMap);
         log.info("Get adNetwork summary size {} condition {}", statAdNetworkSummary.size(), JSONObject.toJSONString(reportConditionDTO));
         return statAdNetworkSummary;
